@@ -1,0 +1,6 @@
+
+Store username and password in .git-credentials
+.git-credentials is where your username and password is stored when you run git config --global credential.helper store, which is what other answers suggest, and then type in your username and password:
+
+https://${username}:${password_or_access_token}@github.com
+So, in order to save the username and password:

@@ -1,0 +1,19 @@
+import { User } from "./entity/User";
+import { sign } from "jsonwebtoken";
+
+export const createAccessToken = (user: User) => {
+    return sign({userId:user.id}, process.env.ACCESS_TOKEN_SECRET!, {expiresIn: "5m"})
+
+}
+
+export const createRefreshToken = (user: User) => {
+     return sign({userId:user.id}, process.env.REFRESH_TOKEN_SECRET!,{expiresIn: "7d"}),{httpOnly:true,}
+
+}
+ 
+
+//process.env.REFRESH_TOKEN_SECRET!,
+
+/*
+git config --global http.proxy http://<username>:<password>@<proxy-server-url>:<port>
+*/

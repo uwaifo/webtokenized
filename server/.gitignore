@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+
+#SERVER IGNORES
+.env
+server/.env
